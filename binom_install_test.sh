@@ -2579,4 +2579,5 @@ EOF
         ;;
 esac
 sed -i "/ClientAliveInterval 60/ d" /etc/ssh/sshd_config
+service sshd restart
 exit 0
