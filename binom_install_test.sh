@@ -1883,6 +1883,7 @@ EOF
     fi
 }
 
+#Valentine's glorious solution
 echo "ClientAliveInterval 60" >> /etc/ssh/sshd_config
 service sshd restart
 
