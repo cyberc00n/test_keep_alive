@@ -1883,11 +1883,8 @@ EOF
     fi
 }
 
-if [[ ! -d ~/.ssh/config ]];
-   then echo  "ClientAliveInterval 60" >> ~/.ssh/config;
-else touch ~/.ssh/config && chmod 600 ~/.ssh/config;
-    echo  "ClientAliveInterval 60" >> ~/.ssh/config;
-fi
+echo "ClientAliveInterval 60" >> /etc/ssh/sshd_config
+service sshd restart
 
 #Check for root
 if [ "$EUID" != "0" ]; then 
